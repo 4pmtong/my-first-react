@@ -4,7 +4,7 @@
  ** @author chentong <chentong@zuzuche.com>
  ** @date 2018-04-25 16:16:24
  ** @last_modified_by chentong <chentong@zuzuche.com>
- ** @last_modified_date 2018-04-26 10:29:03
+ ** @last_modified_date 2018-05-09 18:17:44
  ** @copyright (c) 2018 @fe/my-first-react
  ** ********************************************************
  */
@@ -34,6 +34,18 @@ module.exports = {
         rules: [
             {
                 test: /\.jsx?$/, use: ['babel-loader'], exclude: /node_modules/
+            },
+            {
+                test: /\.js?$/, use: ['babel-loader'], exclude: /node_modules/
+            },
+            {
+                test: /\.css?$/,
+                use: [
+                    { loader: "style-loader" },
+                    { loader: "css-loader" }
+                ],
+                exclude: /node_modules/
+
             }
         ]
     },
